@@ -37,9 +37,11 @@ import Helmet from 'react-helmet';
 import routes from '../client/routes';
 import { fetchComponentData } from './util/fetchData';
 // import posts from './routes/post.routes';
-import lanes from './routes/lane.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
+
+// Import kanban routes
+import lanes from './routes/lane.routes';
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;

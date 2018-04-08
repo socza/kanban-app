@@ -1,10 +1,11 @@
 import Lane from '../models/lane';
 import uuid from 'uuid';
 
-export function getSomething(req, res) {
-  return res.status(200).end();
-}
+// export function getSomething(req, res) {
+//   return res.status(200).end();
+// }
 
+//Add lane
 export function addLane(req, res) {
   if (!req.body.name) {
     res.status(403).end();
@@ -20,5 +21,16 @@ export function addLane(req, res) {
       res.status(500).send(err);
     }
     res.json(saved);
+  });
+}
+
+
+//Get all lanes
+export function getLanes(req, res) {
+  Lane.find().exec((err, lanes) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+    res.json({ lanes });
   });
 }
