@@ -6,4 +6,10 @@ const router = new Router();
 // Add a new Note
 router.route('/notes').post(NoteController.addNote);
 
+// Edit Note
+router.route('/notes/:noteId').put(NoteController.editNote);
+
+// Delete Note
+router.route('/notes/:noteId').delete(NoteController.deleteNote);
+
 export default router;
