@@ -42,6 +42,7 @@ import serverConfig from './config';
 
 // Import kanban routes
 import lanes from './routes/lane.routes';
+import notes from './routes/note.routes';
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
@@ -64,6 +65,7 @@ app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist/client')));
 // app.use('/api', posts);
 app.use('/api', lanes);
+app.use('/api', notes);
 
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {
