@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hashnode/mern-starter.git"
+    "url": "git+https://github.com/socza/kanban-app.git"
   },
   "bugs": {
     "url": "https://github.com/Hashnode/mern-starter/issues"
