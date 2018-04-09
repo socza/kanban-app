@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
+mongoose.plugin(schema => { schema.options.usePushEach = true });
 
 const laneSchema = new Schema({
   name: { type: 'String', required: true },
@@ -7,7 +8,6 @@ const laneSchema = new Schema({
   id: { type: 'String', required: true, unique: true },
 });
 
-mongoose.plugin(schema => { schema.options.usePushEach = true });
 
 function populateNotes(next) {
   this.populate('notes');
