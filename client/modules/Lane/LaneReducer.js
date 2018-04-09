@@ -1,14 +1,24 @@
 // Import Actions
-import {  } from './LaneActions';
+import { CREATE_LANE, UPDATE_LANE, DELETE_LANE } from './LaneActions';
 
 // Initial State
-const initialState = {};
+sconst initialState = [];
 
-const LaneReducer = (state = initialState, action) => {
+export default function lanes(state = initialState, action) {
   switch (action.type) {
-    default:
-      return state;
-  }
-};
+    
+    case CREATE_LANE:
+  		return [...state, action.lane];
 
-export default LaneReducer;
+  	case UPDATE_LANE:
+  		return state.map(lane => {
+    		return lane.id === action.id ? { ...lane, ...action.lane } : lane;
+  		});
+
+  	case DELETE_LANE:
+  		return state.filter(lane => lane.id !== action.laneId);
+
+    default:
+      	return state;
+    }
+}
