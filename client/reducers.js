@@ -12,7 +12,7 @@ import notes from './modules/Note/NoteReducer';
 // Combine all reducers into one root reducer
 export default combineReducers({
   app,
+  intl,
   lanes,
   notes,
-  intl,
- });
+});
