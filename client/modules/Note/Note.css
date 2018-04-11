@@ -1,18 +1,27 @@
 /* Note styles */
 .Note {
-	list-style: none;
-	margin-top: 4px;
+  padding: 5px;
+  color: rgb(60, 124, 108);
 }
-
-.Note > div > div {
-	padding: 3px 0 3px 10px;
-	width: 100%;
-	margin: 0 auto;
-	background-color: #ccc;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
+.notes li {
+  list-style-type: none;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  position: relative;
+}
+.notes li button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: transparent;
+}
+.notes li button:hover {
+  cursor: pointer;
+  color: red;
 }
 .notes input {
-	max-width: 100%;
+  max-width: 100%;
 }

@@ -1,13 +1,10 @@
 .delete {
-	padding: 5px;
-	line-height: 10px;
-	font-weight: bold;
+  padding: 5px;
 }
-
 .value {
-	color: red;
+  font-weight: bold;
 }
-
 .value:hover {
-	cursor: pointer;
+  cursor: pointer;
+  color: rgb(36, 161, 74);
 }
